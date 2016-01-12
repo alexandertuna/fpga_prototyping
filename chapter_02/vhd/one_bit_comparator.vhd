@@ -8,7 +8,7 @@ entity one_bit_comparator is
     );
 end one_bit_comparator;
 
-architecture sum_of_products of one_bit_comparator is
+architecture arch of one_bit_comparator is
 
   signal p0, p1: std_logic;
   
@@ -18,6 +18,6 @@ begin
   p1     <= a and b;
   a_eq_b <= p0 or p1;
 
-end sum_of_products;
+end arch;
 
 
