@@ -6,7 +6,7 @@ entity two_bit_comparator is
   port (
     a, b:   in  std_logic_vector(1 downto 0);
     a_eq_b: out std_logic
-    )
+    );
 
 end two_bit_comparator;
 
