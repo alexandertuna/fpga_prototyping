@@ -1,7 +1,6 @@
-for vhd in decoder_else encoder_else encoder_with; do
+for vhd in $(ls -1 vhd/*.vhd); do
 
-    vcom -check_synthesis vhd/${vhd}.vhd
-    echo
+    vcom -check_synthesis ${vhd}
     
 done
 
