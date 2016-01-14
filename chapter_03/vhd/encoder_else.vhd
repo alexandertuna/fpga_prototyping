@@ -14,10 +14,10 @@ architecture arch of encoder_else is
 
 begin
 
-  output <= "100" (input(3)='1') else
-            "011" (input(2)='1') else
-            "010" (input(1)='1') else
-            "001" (input(0)='1') else
+  output <= "100" when (input(3)='1') else
+            "011" when (input(2)='1') else
+            "010" when (input(1)='1') else
+            "001" when (input(0)='1') else
             "000";
                        
 end arch;
