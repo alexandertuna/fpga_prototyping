@@ -1,6 +1,8 @@
 for vhd in $(ls -1 vhd/*.vhd); do
 
-    vcom -check_synthesis ${vhd}
+    echo ${vhd}
+    vcom -check_synthesis ${vhd} | grep -i error
+    echo
     
 done
 
