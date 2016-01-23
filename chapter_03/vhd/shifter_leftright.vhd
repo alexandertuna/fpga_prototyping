@@ -20,7 +20,7 @@ architecture arch of shifter_leftright is
   
 begin
 
-  reverser_0: entity work.reverse(arch)
+  reverser_0: entity work.reverser(arch)
     port map(en     => shiftleft,
              input  => input,
              output => reversed_0);
@@ -30,10 +30,12 @@ begin
              input  => reversed_0,
              output => shifted);
   
-  reverser_1: entity work.reverse(arch)
+  reverser_1: entity work.reverser(arch)
     port map(en     => shiftleft,
              input  => shifted,
-             output => output);
+             output => reversed_1);
+
+  output <= reversed_1;
   
 end arch;
 
